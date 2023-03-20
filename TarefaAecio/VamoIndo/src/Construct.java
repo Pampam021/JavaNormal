@@ -1,7 +1,6 @@
 public class Construct {
         private float val1=0;
         private float val2=0;
-        //construtor abaixo
     
         public Construct(float val1, float val2) {
             this.val1 = val1;
