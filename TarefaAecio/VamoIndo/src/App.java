@@ -11,10 +11,10 @@ public class App {
         */
         Scanner sc = new Scanner(System.in);
         String hun=null; 
-        Construct calc = new Construct(0,0);
+        Construct calc = new Construct(0,0,0);
         
             
-        System.out.println("Escolha o que você quer\n 1 para imc \n 2 para etapas de natação\n 3 para pagar uma média de lucro\n 4 para tomar remedio\n digite 0 para encerrar: ");
+        System.out.println("Escolha o que você quer\n 1 para imc \n 2 para etapas de natação\n 3 para pagar uma média de lucro\n 4 para tomar remedio\n 5 para baskhara \n digite 0 para encerrar: ");
         hun = sc.nextLine(); 
         
 
@@ -43,6 +43,14 @@ public class App {
                 System.out.println("digite a idade ");
                 calc.setVal2(sc.nextFloat());
                 calc.Remedio();
+            case "5":
+            System.out.println("digite valor1");
+            calc.setVal1(sc.nextFloat());
+            System.out.println("digite valor2");
+            calc.setVal2(sc.nextFloat());
+            System.out.println("digite valor3");
+            calc.setVal3(sc.nextFloat());
+            calc.eq2grau();
             default:
             System.out.println("\nacabemo");
              break;

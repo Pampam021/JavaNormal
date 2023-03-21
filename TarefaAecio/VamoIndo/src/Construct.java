@@ -1,10 +1,14 @@
+import java.lang.Math;
 public class Construct {
         private float val1=0;
         private float val2=0;
+        private float val3=0;
     
-        public Construct(float val1, float val2) {
+        public Construct(float val1, float val2, float val3) {
             this.val1 = val1;
             this.val2 = val2;
+            this.val3 = val3;
+            
         }
         public void retorno(){
             System.out.println((this.val1/(this.val2*this.val2))*10000);
@@ -83,6 +87,23 @@ public class Construct {
                 }
             }
         }
+        public void eq2grau(){
+            float A = this.val1;
+            float B = this.val2;
+            float C = this.val3;
+            float delta = (B*B)-(4*A*C);
+            double rdelta=Math.sqrt(delta);
+            double x1 = ((-1*B)-rdelta )/2*A;
+            double x2 = ((-1*B)+rdelta )/2*A;
+            if(delta<0){
+                System.out.println("nao tem raiz");    
+            }else if(delta == 0){
+                System.out.println("so tem uma raiz");
+            }else{
+                System.out.println("raiz1: "+x1+"\n raiz2: "+x2);
+            }
+            
+        } 
         public float getVal1() {
             return val1;
         }
@@ -97,6 +118,14 @@ public class Construct {
     
         public void setVal2(float altura) {
             this.val2 = altura;
+        }
+        
+        public float getVal3() {
+            return val3;
+        }
+    
+        public void setVal3(float altura) {
+            this.val3 = altura;
         }
     }
     
